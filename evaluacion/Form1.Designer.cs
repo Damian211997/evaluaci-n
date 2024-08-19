@@ -1,0 +1,622 @@
+﻿namespace evaluacion
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            Gestion = new TabControl();
+            tabProyectos = new TabPage();
+            buttonCancelar = new Button();
+            buttonGuardar = new Button();
+            dataGridView1 = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            ColumnNombre = new DataGridViewTextBoxColumn();
+            ColumnDescripcion = new DataGridViewTextBoxColumn();
+            ColumnEstado = new DataGridViewTextBoxColumn();
+            ColumnHrsTrabajadas = new DataGridViewTextBoxColumn();
+            ColumnHrsTotales = new DataGridViewTextBoxColumn();
+            ColumnFechaCreacion = new DataGridViewTextBoxColumn();
+            ButtonAgregar = new DataGridViewButtonColumn();
+            ButtonEditar = new DataGridViewButtonColumn();
+            ButtonEliminar = new DataGridViewButtonColumn();
+            label2 = new Label();
+            numericHorasTrabajadas = new NumericUpDown();
+            label1 = new Label();
+            Terminado = new CheckBox();
+            EnProgreso = new CheckBox();
+            Estado = new Label();
+            Pendiente = new CheckBox();
+            Descripcion = new Label();
+            textBoxDescripcion = new TextBox();
+            textName = new TextBox();
+            Nombre = new Label();
+            tabTareas = new TabPage();
+            dataGridView2 = new DataGridView();
+            buttonCancelar2 = new Button();
+            buttonGuardar2 = new Button();
+            checkBox5 = new CheckBox();
+            checkBox4 = new CheckBox();
+            label5 = new Label();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            label4 = new Label();
+            numericUpDown1 = new NumericUpDown();
+            label3 = new Label();
+            dateInicio = new DateTimePicker();
+            FEinicio = new Label();
+            IDTareas = new DataGridViewTextBoxColumn();
+            ClumnFechaInicio = new DataGridViewTextBoxColumn();
+            ColumnEstado2 = new DataGridViewTextBoxColumn();
+            ColumnHoras = new DataGridViewTextBoxColumn();
+            ColumnArea = new DataGridViewTextBoxColumn();
+            ColumnProyecto = new DataGridViewTextBoxColumn();
+            ColumnEmpleado = new DataGridViewTextBoxColumn();
+            Editar = new DataGridViewButtonColumn();
+            Agregar = new DataGridViewButtonColumn();
+            Eliminar = new DataGridViewButtonColumn();
+            Gestion.SuspendLayout();
+            tabProyectos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericHorasTrabajadas).BeginInit();
+            tabTareas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            SuspendLayout();
+            // 
+            // Gestion
+            // 
+            Gestion.Controls.Add(tabProyectos);
+            Gestion.Controls.Add(tabTareas);
+            Gestion.Location = new Point(12, 0);
+            Gestion.Name = "Gestion";
+            Gestion.SelectedIndex = 0;
+            Gestion.Size = new Size(1005, 509);
+            Gestion.TabIndex = 2;
+            // 
+            // tabProyectos
+            // 
+            tabProyectos.Controls.Add(buttonCancelar);
+            tabProyectos.Controls.Add(buttonGuardar);
+            tabProyectos.Controls.Add(dataGridView1);
+            tabProyectos.Controls.Add(label2);
+            tabProyectos.Controls.Add(numericHorasTrabajadas);
+            tabProyectos.Controls.Add(label1);
+            tabProyectos.Controls.Add(Terminado);
+            tabProyectos.Controls.Add(EnProgreso);
+            tabProyectos.Controls.Add(Estado);
+            tabProyectos.Controls.Add(Pendiente);
+            tabProyectos.Controls.Add(Descripcion);
+            tabProyectos.Controls.Add(textBoxDescripcion);
+            tabProyectos.Controls.Add(textName);
+            tabProyectos.Controls.Add(Nombre);
+            tabProyectos.Location = new Point(4, 29);
+            tabProyectos.Name = "tabProyectos";
+            tabProyectos.Padding = new Padding(3);
+            tabProyectos.Size = new Size(997, 476);
+            tabProyectos.TabIndex = 0;
+            tabProyectos.Text = "Proyectos";
+            tabProyectos.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancelar
+            // 
+            buttonCancelar.Location = new Point(870, 240);
+            buttonCancelar.Name = "buttonCancelar";
+            buttonCancelar.Size = new Size(94, 29);
+            buttonCancelar.TabIndex = 14;
+            buttonCancelar.Text = "Cancelar";
+            buttonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // buttonGuardar
+            // 
+            buttonGuardar.Location = new Point(750, 240);
+            buttonGuardar.Name = "buttonGuardar";
+            buttonGuardar.Size = new Size(94, 29);
+            buttonGuardar.TabIndex = 13;
+            buttonGuardar.Text = "Guardar";
+            buttonGuardar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, ColumnNombre, ColumnDescripcion, ColumnEstado, ColumnHrsTrabajadas, ColumnHrsTotales, ColumnFechaCreacion, ButtonAgregar, ButtonEditar, ButtonEliminar });
+            dataGridView1.Location = new Point(27, 288);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(920, 151);
+            dataGridView1.TabIndex = 12;
+            // 
+            // ID
+            // 
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.Width = 125;
+            // 
+            // ColumnNombre
+            // 
+            ColumnNombre.HeaderText = "Nombre";
+            ColumnNombre.MinimumWidth = 6;
+            ColumnNombre.Name = "ColumnNombre";
+            ColumnNombre.Width = 125;
+            // 
+            // ColumnDescripcion
+            // 
+            ColumnDescripcion.HeaderText = "Descripcion";
+            ColumnDescripcion.MinimumWidth = 6;
+            ColumnDescripcion.Name = "ColumnDescripcion";
+            ColumnDescripcion.Width = 125;
+            // 
+            // ColumnEstado
+            // 
+            ColumnEstado.HeaderText = "Estado";
+            ColumnEstado.MinimumWidth = 6;
+            ColumnEstado.Name = "ColumnEstado";
+            ColumnEstado.Resizable = DataGridViewTriState.True;
+            ColumnEstado.Width = 125;
+            // 
+            // ColumnHrsTrabajadas
+            // 
+            ColumnHrsTrabajadas.HeaderText = "Horas Trabajadas";
+            ColumnHrsTrabajadas.MinimumWidth = 6;
+            ColumnHrsTrabajadas.Name = "ColumnHrsTrabajadas";
+            ColumnHrsTrabajadas.Width = 125;
+            // 
+            // ColumnHrsTotales
+            // 
+            ColumnHrsTotales.HeaderText = "Horas Totales ";
+            ColumnHrsTotales.MinimumWidth = 6;
+            ColumnHrsTotales.Name = "ColumnHrsTotales";
+            ColumnHrsTotales.Width = 125;
+            // 
+            // ColumnFechaCreacion
+            // 
+            ColumnFechaCreacion.HeaderText = "Fecha de creacion";
+            ColumnFechaCreacion.MinimumWidth = 6;
+            ColumnFechaCreacion.Name = "ColumnFechaCreacion";
+            ColumnFechaCreacion.Width = 125;
+            // 
+            // ButtonAgregar
+            // 
+            ButtonAgregar.HeaderText = "Agregar";
+            ButtonAgregar.MinimumWidth = 6;
+            ButtonAgregar.Name = "ButtonAgregar";
+            ButtonAgregar.Width = 125;
+            // 
+            // ButtonEditar
+            // 
+            ButtonEditar.HeaderText = "Editar";
+            ButtonEditar.MinimumWidth = 6;
+            ButtonEditar.Name = "ButtonEditar";
+            ButtonEditar.Width = 125;
+            // 
+            // ButtonEliminar
+            // 
+            ButtonEliminar.HeaderText = "Eliminar";
+            ButtonEliminar.MinimumWidth = 6;
+            ButtonEliminar.Name = "ButtonEliminar";
+            ButtonEliminar.Width = 125;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(335, 100);
+            label2.Name = "label2";
+            label2.Size = new Size(124, 20);
+            label2.TabIndex = 11;
+            label2.Text = "Horas Trabajadas";
+            // 
+            // numericHorasTrabajadas
+            // 
+            numericHorasTrabajadas.Location = new Point(471, 98);
+            numericHorasTrabajadas.Name = "numericHorasTrabajadas";
+            numericHorasTrabajadas.Size = new Size(150, 27);
+            numericHorasTrabajadas.TabIndex = 10;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(335, 175);
+            label1.Name = "label1";
+            label1.Size = new Size(130, 20);
+            label1.TabIndex = 9;
+            label1.Text = "Fecha de Creacion";
+            // 
+            // Terminado
+            // 
+            Terminado.AutoSize = true;
+            Terminado.Location = new Point(613, 34);
+            Terminado.Name = "Terminado";
+            Terminado.Size = new Size(102, 24);
+            Terminado.TabIndex = 7;
+            Terminado.Text = "Terminado";
+            Terminado.UseVisualStyleBackColor = true;
+            // 
+            // EnProgreso
+            // 
+            EnProgreso.AutoSize = true;
+            EnProgreso.Location = new Point(497, 34);
+            EnProgreso.Name = "EnProgreso";
+            EnProgreso.Size = new Size(110, 24);
+            EnProgreso.TabIndex = 6;
+            EnProgreso.Text = "En Progreso";
+            EnProgreso.UseVisualStyleBackColor = true;
+            // 
+            // Estado
+            // 
+            Estado.AutoSize = true;
+            Estado.Location = new Point(335, 34);
+            Estado.Name = "Estado";
+            Estado.Size = new Size(54, 20);
+            Estado.TabIndex = 5;
+            Estado.Text = "Estado";
+            // 
+            // Pendiente
+            // 
+            Pendiente.AutoSize = true;
+            Pendiente.Location = new Point(395, 34);
+            Pendiente.Name = "Pendiente";
+            Pendiente.Size = new Size(96, 24);
+            Pendiente.TabIndex = 4;
+            Pendiente.Text = "Pendiente";
+            Pendiente.UseVisualStyleBackColor = true;
+            // 
+            // Descripcion
+            // 
+            Descripcion.AutoSize = true;
+            Descripcion.Location = new Point(8, 97);
+            Descripcion.Name = "Descripcion";
+            Descripcion.Size = new Size(87, 20);
+            Descripcion.TabIndex = 3;
+            Descripcion.Text = "Descripcion";
+            // 
+            // textBoxDescripcion
+            // 
+            textBoxDescripcion.Location = new Point(101, 97);
+            textBoxDescripcion.Multiline = true;
+            textBoxDescripcion.Name = "textBoxDescripcion";
+            textBoxDescripcion.Size = new Size(194, 100);
+            textBoxDescripcion.TabIndex = 2;
+            // 
+            // textName
+            // 
+            textName.Location = new Point(101, 38);
+            textName.Name = "textName";
+            textName.Size = new Size(194, 27);
+            textName.TabIndex = 1;
+            // 
+            // Nombre
+            // 
+            Nombre.AutoSize = true;
+            Nombre.Location = new Point(8, 38);
+            Nombre.Name = "Nombre";
+            Nombre.Size = new Size(64, 20);
+            Nombre.TabIndex = 0;
+            Nombre.Text = "Nombre";
+            // 
+            // tabTareas
+            // 
+            tabTareas.Controls.Add(dataGridView2);
+            tabTareas.Controls.Add(buttonCancelar2);
+            tabTareas.Controls.Add(buttonGuardar2);
+            tabTareas.Controls.Add(checkBox5);
+            tabTareas.Controls.Add(checkBox4);
+            tabTareas.Controls.Add(label5);
+            tabTareas.Controls.Add(checkBox3);
+            tabTareas.Controls.Add(checkBox2);
+            tabTareas.Controls.Add(checkBox1);
+            tabTareas.Controls.Add(label4);
+            tabTareas.Controls.Add(numericUpDown1);
+            tabTareas.Controls.Add(label3);
+            tabTareas.Controls.Add(dateInicio);
+            tabTareas.Controls.Add(FEinicio);
+            tabTareas.Location = new Point(4, 29);
+            tabTareas.Name = "tabTareas";
+            tabTareas.Padding = new Padding(3);
+            tabTareas.Size = new Size(997, 476);
+            tabTareas.TabIndex = 1;
+            tabTareas.Text = "Tareas";
+            tabTareas.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IDTareas, ClumnFechaInicio, ColumnEstado2, ColumnHoras, ColumnArea, ColumnProyecto, ColumnEmpleado, Editar, Agregar, Eliminar });
+            dataGridView2.Location = new Point(24, 244);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(931, 188);
+            dataGridView2.TabIndex = 14;
+            // 
+            // buttonCancelar2
+            // 
+            buttonCancelar2.Location = new Point(594, 117);
+            buttonCancelar2.Name = "buttonCancelar2";
+            buttonCancelar2.Size = new Size(94, 29);
+            buttonCancelar2.TabIndex = 13;
+            buttonCancelar2.Text = "Cancelar";
+            buttonCancelar2.UseVisualStyleBackColor = true;
+            // 
+            // buttonGuardar2
+            // 
+            buttonGuardar2.Location = new Point(594, 71);
+            buttonGuardar2.Name = "buttonGuardar2";
+            buttonGuardar2.Size = new Size(94, 29);
+            buttonGuardar2.TabIndex = 12;
+            buttonGuardar2.Text = "Guardar";
+            buttonGuardar2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            checkBox5.AutoSize = true;
+            checkBox5.Location = new Point(222, 161);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(71, 24);
+            checkBox5.TabIndex = 11;
+            checkBox5.Text = "Redes";
+            checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Location = new Point(115, 161);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(96, 24);
+            checkBox4.TabIndex = 10;
+            checkBox4.Text = "Hardware";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 161);
+            label5.Name = "label5";
+            label5.Size = new Size(40, 20);
+            label5.TabIndex = 9;
+            label5.Text = "Area";
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(338, 77);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(99, 24);
+            checkBox3.TabIndex = 8;
+            checkBox3.Text = "Finalizado";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(222, 77);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(110, 24);
+            checkBox2.TabIndex = 7;
+            checkBox2.Text = "En Progreso";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(120, 76);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(96, 24);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "Pendiente";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 77);
+            label4.Name = "label4";
+            label4.Size = new Size(54, 20);
+            label4.TabIndex = 5;
+            label4.Text = "Estado";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(120, 117);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(150, 27);
+            numericUpDown1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 117);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 20);
+            label3.TabIndex = 3;
+            label3.Text = "Horas";
+            // 
+            // dateInicio
+            // 
+            dateInicio.Location = new Point(120, 27);
+            dateInicio.Name = "dateInicio";
+            dateInicio.Size = new Size(270, 27);
+            dateInicio.TabIndex = 2;
+            // 
+            // FEinicio
+            // 
+            FEinicio.AutoSize = true;
+            FEinicio.Location = new Point(6, 34);
+            FEinicio.Name = "FEinicio";
+            FEinicio.Size = new Size(108, 20);
+            FEinicio.TabIndex = 1;
+            FEinicio.Text = "Fecha de Inicio";
+            // 
+            // IDTareas
+            // 
+            IDTareas.HeaderText = "ID";
+            IDTareas.MinimumWidth = 6;
+            IDTareas.Name = "IDTareas";
+            IDTareas.Width = 125;
+            // 
+            // ClumnFechaInicio
+            // 
+            ClumnFechaInicio.HeaderText = "Fecha de Inicio";
+            ClumnFechaInicio.MinimumWidth = 6;
+            ClumnFechaInicio.Name = "ClumnFechaInicio";
+            ClumnFechaInicio.Width = 125;
+            // 
+            // ColumnEstado2
+            // 
+            ColumnEstado2.HeaderText = "Estado";
+            ColumnEstado2.MinimumWidth = 6;
+            ColumnEstado2.Name = "ColumnEstado2";
+            ColumnEstado2.Width = 125;
+            // 
+            // ColumnHoras
+            // 
+            ColumnHoras.HeaderText = "Horas";
+            ColumnHoras.MinimumWidth = 6;
+            ColumnHoras.Name = "ColumnHoras";
+            ColumnHoras.Width = 125;
+            // 
+            // ColumnArea
+            // 
+            ColumnArea.HeaderText = "Area";
+            ColumnArea.MinimumWidth = 6;
+            ColumnArea.Name = "ColumnArea";
+            ColumnArea.Width = 125;
+            // 
+            // ColumnProyecto
+            // 
+            ColumnProyecto.HeaderText = "Proyecto";
+            ColumnProyecto.MinimumWidth = 6;
+            ColumnProyecto.Name = "ColumnProyecto";
+            ColumnProyecto.Width = 125;
+            // 
+            // ColumnEmpleado
+            // 
+            ColumnEmpleado.HeaderText = "Empleado Asignado";
+            ColumnEmpleado.MinimumWidth = 6;
+            ColumnEmpleado.Name = "ColumnEmpleado";
+            ColumnEmpleado.Width = 125;
+            // 
+            // Editar
+            // 
+            Editar.HeaderText = "Editar";
+            Editar.MinimumWidth = 6;
+            Editar.Name = "Editar";
+            Editar.Width = 125;
+            // 
+            // Agregar
+            // 
+            Agregar.HeaderText = "Agregar";
+            Agregar.MinimumWidth = 6;
+            Agregar.Name = "Agregar";
+            Agregar.Width = 125;
+            // 
+            // Eliminar
+            // 
+            Eliminar.HeaderText = "Eliminar";
+            Eliminar.MinimumWidth = 6;
+            Eliminar.Name = "Eliminar";
+            Eliminar.Width = 125;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1019, 511);
+            Controls.Add(Gestion);
+            Name = "Form1";
+            Text = "Gestiones";
+            Load += Form1_Load;
+            Gestion.ResumeLayout(false);
+            tabProyectos.ResumeLayout(false);
+            tabProyectos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericHorasTrabajadas).EndInit();
+            tabTareas.ResumeLayout(false);
+            tabTareas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private TabControl Gestion;
+        private TabPage tabProyectos;
+        private TabPage tabTareas;
+        private TextBox textBoxDescripcion;
+        private Label Nombre;
+        private Label Descripcion;
+        private Label Estado;
+        private CheckBox Pendiente;
+        private CheckBox Terminado;
+        private CheckBox EnProgreso;
+        private Label label1;
+        private DateTimePicker Date1;
+        private NumericUpDown numericHorasTrabajadas;
+        private Label label2;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn ColumnNombre;
+        private DataGridViewTextBoxColumn ColumnDescripcion;
+        private DataGridViewTextBoxColumn ColumnEstado;
+        private DataGridViewTextBoxColumn ColumnHrsTrabajadas;
+        private DataGridViewTextBoxColumn ColumnHrsTotales;
+        private DataGridViewTextBoxColumn ColumnFechaCreacion;
+        private DataGridViewButtonColumn ButtonAgregar;
+        private DataGridViewButtonColumn ButtonEditar;
+        private DataGridViewButtonColumn ButtonEliminar;
+        private Button buttonCancelar;
+        private Button buttonGuardar;
+        private TextBox textName;
+        private TextBox textName2;
+        private Label FEinicio;
+        private DateTimePicker dateInicio;
+        private Label label3;
+        private Button buttonGuardar2;
+        private CheckBox checkBox5;
+        private CheckBox checkBox4;
+        private Label label5;
+        private CheckBox checkBox3;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
+        private Label label4;
+        private NumericUpDown numericUpDown1;
+        private DataGridView dataGridView2;
+        private Button buttonCancelar2;
+        private DataGridViewTextBoxColumn IDTareas;
+        private DataGridViewTextBoxColumn ClumnFechaInicio;
+        private DataGridViewTextBoxColumn ColumnEstado2;
+        private DataGridViewTextBoxColumn ColumnHoras;
+        private DataGridViewTextBoxColumn ColumnArea;
+        private DataGridViewTextBoxColumn ColumnProyecto;
+        private DataGridViewTextBoxColumn ColumnEmpleado;
+        private DataGridViewButtonColumn Editar;
+        private DataGridViewButtonColumn Agregar;
+        private DataGridViewButtonColumn Eliminar;
+
+        public object DateCreacion { get; private set; }
+    }
+}
