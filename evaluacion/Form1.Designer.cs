@@ -51,6 +51,12 @@
             textName = new TextBox();
             Nombre = new Label();
             tabTareas = new TabPage();
+            gbEstadoTabla = new GroupBox();
+            rbFinalizadoTabla = new RadioButton();
+            rbProcesoTabla = new RadioButton();
+            gbArea = new GroupBox();
+            rbRedes = new RadioButton();
+            rbHardware = new RadioButton();
             dataGridView2 = new DataGridView();
             IDTareas = new DataGridViewTextBoxColumn();
             ClumnFechaInicio = new DataGridViewTextBoxColumn();
@@ -64,35 +70,45 @@
             Eliminar = new DataGridViewButtonColumn();
             buttonCancelar2 = new Button();
             buttonGuardar2 = new Button();
-            checkBox5 = new CheckBox();
-            checkBox4 = new CheckBox();
-            label5 = new Label();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
-            label4 = new Label();
             numericUpDown1 = new NumericUpDown();
             label3 = new Label();
             dateInicio = new DateTimePicker();
             FEinicio = new Label();
+            GestionUsuarios = new TabPage();
+            btnGuardar = new Button();
+            dataGridView3 = new DataGridView();
+            IdUsuarios = new DataGridViewTextBoxColumn();
+            ColumnNombreUsuario = new DataGridViewTextBoxColumn();
+            ColumnGmail = new DataGridViewTextBoxColumn();
+            ColumnEditarUsuario = new DataGridViewButtonColumn();
+            ColumnEliminarUsuario = new DataGridViewButtonColumn();
+            lbGmail = new Label();
+            tbGmail = new TextBox();
+            tbUsuario = new TextBox();
+            lbNombreUsuario = new Label();
             Gestion.SuspendLayout();
             tabProyectos.SuspendLayout();
             estadoProyecto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericHorasTotales).BeginInit();
             tabTareas.SuspendLayout();
+            gbEstadoTabla.SuspendLayout();
+            gbArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            GestionUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
             // 
             // Gestion
             // 
+            Gestion.Controls.Add(GestionUsuarios);
             Gestion.Controls.Add(tabProyectos);
             Gestion.Controls.Add(tabTareas);
             Gestion.Location = new Point(12, 0);
             Gestion.Name = "Gestion";
             Gestion.SelectedIndex = 0;
-            Gestion.Size = new Size(1005, 509);
+            Gestion.Size = new Size(1034, 509);
             Gestion.TabIndex = 2;
             // 
             // tabProyectos
@@ -109,7 +125,7 @@
             tabProyectos.Location = new Point(4, 29);
             tabProyectos.Name = "tabProyectos";
             tabProyectos.Padding = new Padding(3);
-            tabProyectos.Size = new Size(997, 476);
+            tabProyectos.Size = new Size(1026, 476);
             tabProyectos.TabIndex = 0;
             tabProyectos.Text = "Proyectos";
             tabProyectos.UseVisualStyleBackColor = true;
@@ -118,9 +134,9 @@
             // 
             estadoProyecto.Controls.Add(rbFinalizado);
             estadoProyecto.Controls.Add(rbProceso);
-            estadoProyecto.Location = new Point(670, 38);
+            estadoProyecto.Location = new Point(689, 38);
             estadoProyecto.Name = "estadoProyecto";
-            estadoProyecto.Size = new Size(288, 125);
+            estadoProyecto.Size = new Size(269, 100);
             estadoProyecto.TabIndex = 15;
             estadoProyecto.TabStop = false;
             estadoProyecto.Text = "Estado";
@@ -128,7 +144,7 @@
             // rbFinalizado
             // 
             rbFinalizado.AutoSize = true;
-            rbFinalizado.Location = new Point(157, 56);
+            rbFinalizado.Location = new Point(155, 45);
             rbFinalizado.Name = "rbFinalizado";
             rbFinalizado.Size = new Size(98, 24);
             rbFinalizado.TabIndex = 1;
@@ -139,7 +155,7 @@
             // rbProceso
             // 
             rbProceso.AutoSize = true;
-            rbProceso.Location = new Point(23, 56);
+            rbProceso.Location = new Point(22, 45);
             rbProceso.Name = "rbProceso";
             rbProceso.Size = new Size(102, 24);
             rbProceso.TabIndex = 0;
@@ -164,7 +180,7 @@
             dataGridView1.Location = new Point(8, 288);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(983, 182);
+            dataGridView1.Size = new Size(950, 182);
             dataGridView1.TabIndex = 12;
             // 
             // ID
@@ -282,16 +298,11 @@
             // 
             // tabTareas
             // 
+            tabTareas.Controls.Add(gbEstadoTabla);
+            tabTareas.Controls.Add(gbArea);
             tabTareas.Controls.Add(dataGridView2);
             tabTareas.Controls.Add(buttonCancelar2);
             tabTareas.Controls.Add(buttonGuardar2);
-            tabTareas.Controls.Add(checkBox5);
-            tabTareas.Controls.Add(checkBox4);
-            tabTareas.Controls.Add(label5);
-            tabTareas.Controls.Add(checkBox3);
-            tabTareas.Controls.Add(checkBox2);
-            tabTareas.Controls.Add(checkBox1);
-            tabTareas.Controls.Add(label4);
             tabTareas.Controls.Add(numericUpDown1);
             tabTareas.Controls.Add(label3);
             tabTareas.Controls.Add(dateInicio);
@@ -299,10 +310,76 @@
             tabTareas.Location = new Point(4, 29);
             tabTareas.Name = "tabTareas";
             tabTareas.Padding = new Padding(3);
-            tabTareas.Size = new Size(997, 476);
+            tabTareas.Size = new Size(1026, 476);
             tabTareas.TabIndex = 1;
             tabTareas.Text = "Tareas";
             tabTareas.UseVisualStyleBackColor = true;
+            // 
+            // gbEstadoTabla
+            // 
+            gbEstadoTabla.Controls.Add(rbFinalizadoTabla);
+            gbEstadoTabla.Controls.Add(rbProcesoTabla);
+            gbEstadoTabla.Location = new Point(24, 140);
+            gbEstadoTabla.Name = "gbEstadoTabla";
+            gbEstadoTabla.Size = new Size(250, 98);
+            gbEstadoTabla.TabIndex = 16;
+            gbEstadoTabla.TabStop = false;
+            gbEstadoTabla.Text = "Estado";
+            // 
+            // rbFinalizadoTabla
+            // 
+            rbFinalizadoTabla.AutoSize = true;
+            rbFinalizadoTabla.Location = new Point(146, 38);
+            rbFinalizadoTabla.Name = "rbFinalizadoTabla";
+            rbFinalizadoTabla.Size = new Size(98, 24);
+            rbFinalizadoTabla.TabIndex = 1;
+            rbFinalizadoTabla.TabStop = true;
+            rbFinalizadoTabla.Text = "Finalizado";
+            rbFinalizadoTabla.UseVisualStyleBackColor = true;
+            // 
+            // rbProcesoTabla
+            // 
+            rbProcesoTabla.AutoSize = true;
+            rbProcesoTabla.Location = new Point(12, 38);
+            rbProcesoTabla.Name = "rbProcesoTabla";
+            rbProcesoTabla.Size = new Size(102, 24);
+            rbProcesoTabla.TabIndex = 0;
+            rbProcesoTabla.TabStop = true;
+            rbProcesoTabla.Text = "En Proceso";
+            rbProcesoTabla.UseVisualStyleBackColor = true;
+            // 
+            // gbArea
+            // 
+            gbArea.Controls.Add(rbRedes);
+            gbArea.Controls.Add(rbHardware);
+            gbArea.Location = new Point(705, 29);
+            gbArea.Name = "gbArea";
+            gbArea.Size = new Size(250, 98);
+            gbArea.TabIndex = 15;
+            gbArea.TabStop = false;
+            gbArea.Text = "Area";
+            // 
+            // rbRedes
+            // 
+            rbRedes.AutoSize = true;
+            rbRedes.Location = new Point(156, 40);
+            rbRedes.Name = "rbRedes";
+            rbRedes.Size = new Size(70, 24);
+            rbRedes.TabIndex = 1;
+            rbRedes.TabStop = true;
+            rbRedes.Text = "Redes";
+            rbRedes.UseVisualStyleBackColor = true;
+            // 
+            // rbHardware
+            // 
+            rbHardware.AutoSize = true;
+            rbHardware.Location = new Point(13, 40);
+            rbHardware.Name = "rbHardware";
+            rbHardware.Size = new Size(95, 24);
+            rbHardware.TabIndex = 0;
+            rbHardware.TabStop = true;
+            rbHardware.Text = "Hardware";
+            rbHardware.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -386,7 +463,7 @@
             // 
             // buttonCancelar2
             // 
-            buttonCancelar2.Location = new Point(594, 117);
+            buttonCancelar2.Location = new Point(861, 209);
             buttonCancelar2.Name = "buttonCancelar2";
             buttonCancelar2.Size = new Size(94, 29);
             buttonCancelar2.TabIndex = 13;
@@ -395,84 +472,16 @@
             // 
             // buttonGuardar2
             // 
-            buttonGuardar2.Location = new Point(594, 71);
+            buttonGuardar2.Location = new Point(861, 174);
             buttonGuardar2.Name = "buttonGuardar2";
             buttonGuardar2.Size = new Size(94, 29);
             buttonGuardar2.TabIndex = 12;
             buttonGuardar2.Text = "Guardar";
             buttonGuardar2.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
-            // 
-            checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(222, 161);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(71, 24);
-            checkBox5.TabIndex = 11;
-            checkBox5.Text = "Redes";
-            checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(115, 161);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(96, 24);
-            checkBox4.TabIndex = 10;
-            checkBox4.Text = "Hardware";
-            checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 161);
-            label5.Name = "label5";
-            label5.Size = new Size(40, 20);
-            label5.TabIndex = 9;
-            label5.Text = "Area";
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(338, 77);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(99, 24);
-            checkBox3.TabIndex = 8;
-            checkBox3.Text = "Finalizado";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(222, 77);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(110, 24);
-            checkBox2.TabIndex = 7;
-            checkBox2.Text = "En Progreso";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(120, 76);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(96, 24);
-            checkBox1.TabIndex = 6;
-            checkBox1.Text = "Pendiente";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 77);
-            label4.Name = "label4";
-            label4.Size = new Size(54, 20);
-            label4.TabIndex = 5;
-            label4.Text = "Estado";
-            // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(120, 117);
+            numericUpDown1.Location = new Point(78, 83);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(150, 27);
             numericUpDown1.TabIndex = 4;
@@ -480,7 +489,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(6, 117);
+            label3.Location = new Point(24, 85);
             label3.Name = "label3";
             label3.Size = new Size(48, 20);
             label3.TabIndex = 3;
@@ -488,19 +497,122 @@
             // 
             // dateInicio
             // 
-            dateInicio.Location = new Point(120, 27);
+            dateInicio.Location = new Point(138, 29);
             dateInicio.Name = "dateInicio";
-            dateInicio.Size = new Size(270, 27);
+            dateInicio.Size = new Size(289, 27);
             dateInicio.TabIndex = 2;
             // 
             // FEinicio
             // 
             FEinicio.AutoSize = true;
-            FEinicio.Location = new Point(6, 34);
+            FEinicio.Location = new Point(24, 34);
             FEinicio.Name = "FEinicio";
             FEinicio.Size = new Size(108, 20);
             FEinicio.TabIndex = 1;
             FEinicio.Text = "Fecha de Inicio";
+            // 
+            // GestionUsuarios
+            // 
+            GestionUsuarios.Controls.Add(btnGuardar);
+            GestionUsuarios.Controls.Add(dataGridView3);
+            GestionUsuarios.Controls.Add(lbGmail);
+            GestionUsuarios.Controls.Add(tbGmail);
+            GestionUsuarios.Controls.Add(tbUsuario);
+            GestionUsuarios.Controls.Add(lbNombreUsuario);
+            GestionUsuarios.Location = new Point(4, 29);
+            GestionUsuarios.Name = "GestionUsuarios";
+            GestionUsuarios.Padding = new Padding(3);
+            GestionUsuarios.Size = new Size(1026, 476);
+            GestionUsuarios.TabIndex = 2;
+            GestionUsuarios.Text = "Usuarios";
+            GestionUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(604, 98);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(94, 29);
+            btnGuardar.TabIndex = 5;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // dataGridView3
+            // 
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { IdUsuarios, ColumnNombreUsuario, ColumnGmail, ColumnEditarUsuario, ColumnEliminarUsuario });
+            dataGridView3.Location = new Point(19, 180);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 51;
+            dataGridView3.Size = new Size(679, 115);
+            dataGridView3.TabIndex = 4;
+            // 
+            // IdUsuarios
+            // 
+            IdUsuarios.HeaderText = "ID";
+            IdUsuarios.MinimumWidth = 6;
+            IdUsuarios.Name = "IdUsuarios";
+            IdUsuarios.Width = 125;
+            // 
+            // ColumnNombreUsuario
+            // 
+            ColumnNombreUsuario.HeaderText = "Nombre";
+            ColumnNombreUsuario.MinimumWidth = 6;
+            ColumnNombreUsuario.Name = "ColumnNombreUsuario";
+            ColumnNombreUsuario.Width = 125;
+            // 
+            // ColumnGmail
+            // 
+            ColumnGmail.HeaderText = "Gmail";
+            ColumnGmail.MinimumWidth = 6;
+            ColumnGmail.Name = "ColumnGmail";
+            ColumnGmail.Width = 125;
+            // 
+            // ColumnEditarUsuario
+            // 
+            ColumnEditarUsuario.HeaderText = "Editar";
+            ColumnEditarUsuario.MinimumWidth = 6;
+            ColumnEditarUsuario.Name = "ColumnEditarUsuario";
+            ColumnEditarUsuario.Width = 125;
+            // 
+            // ColumnEliminarUsuario
+            // 
+            ColumnEliminarUsuario.HeaderText = "Eliminar";
+            ColumnEliminarUsuario.MinimumWidth = 6;
+            ColumnEliminarUsuario.Name = "ColumnEliminarUsuario";
+            ColumnEliminarUsuario.Width = 125;
+            // 
+            // lbGmail
+            // 
+            lbGmail.AutoSize = true;
+            lbGmail.Location = new Point(19, 107);
+            lbGmail.Name = "lbGmail";
+            lbGmail.Size = new Size(48, 20);
+            lbGmail.TabIndex = 3;
+            lbGmail.Text = "Gmail";
+            // 
+            // tbGmail
+            // 
+            tbGmail.Location = new Point(89, 100);
+            tbGmail.Name = "tbGmail";
+            tbGmail.Size = new Size(313, 27);
+            tbGmail.TabIndex = 2;
+            // 
+            // tbUsuario
+            // 
+            tbUsuario.Location = new Point(89, 43);
+            tbUsuario.Name = "tbUsuario";
+            tbUsuario.Size = new Size(313, 27);
+            tbUsuario.TabIndex = 1;
+            // 
+            // lbNombreUsuario
+            // 
+            lbNombreUsuario.AutoSize = true;
+            lbNombreUsuario.Location = new Point(19, 46);
+            lbNombreUsuario.Name = "lbNombreUsuario";
+            lbNombreUsuario.Size = new Size(64, 20);
+            lbNombreUsuario.TabIndex = 0;
+            lbNombreUsuario.Text = "Nombre";
             // 
             // Form1
             // 
@@ -520,8 +632,15 @@
             ((System.ComponentModel.ISupportInitialize)numericHorasTotales).EndInit();
             tabTareas.ResumeLayout(false);
             tabTareas.PerformLayout();
+            gbEstadoTabla.ResumeLayout(false);
+            gbEstadoTabla.PerformLayout();
+            gbArea.ResumeLayout(false);
+            gbArea.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            GestionUsuarios.ResumeLayout(false);
+            GestionUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ResumeLayout(false);
         }
 
@@ -544,13 +663,6 @@
         private DateTimePicker dateInicio;
         private Label label3;
         private Button buttonGuardar2;
-        private CheckBox checkBox5;
-        private CheckBox checkBox4;
-        private Label label5;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private Label label4;
         private NumericUpDown numericUpDown1;
         private DataGridView dataGridView2;
         private Button buttonCancelar2;
@@ -576,6 +688,24 @@
         private GroupBox estadoProyecto;
         private RadioButton rbFinalizado;
         private RadioButton rbProceso;
+        private GroupBox gbArea;
+        private RadioButton rbRedes;
+        private RadioButton rbHardware;
+        private GroupBox gbEstadoTabla;
+        private RadioButton rbFinalizadoTabla;
+        private RadioButton rbProcesoTabla;
+        private TabPage GestionUsuarios;
+        private DataGridView dataGridView3;
+        private Label lbGmail;
+        private TextBox tbGmail;
+        private TextBox tbUsuario;
+        private Label lbNombreUsuario;
+        private Button btnGuardar;
+        private DataGridViewTextBoxColumn IdUsuarios;
+        private DataGridViewTextBoxColumn ColumnNombreUsuario;
+        private DataGridViewTextBoxColumn ColumnGmail;
+        private DataGridViewButtonColumn ColumnEditarUsuario;
+        private DataGridViewButtonColumn ColumnEliminarUsuario;
 
         public object DateCreacion { get; private set; }
     }
