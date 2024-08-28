@@ -99,6 +99,7 @@
             // 
             // Gestion
             // 
+            Gestion.Controls.Add(GestionUsuarios);
             Gestion.Controls.Add(tabProyectos);
             Gestion.Controls.Add(tabTareas);
             Gestion.Controls.Add(GestionUsuarios);
@@ -106,7 +107,7 @@
             Gestion.Margin = new Padding(3, 2, 3, 2);
             Gestion.Name = "Gestion";
             Gestion.SelectedIndex = 0;
-            Gestion.Size = new Size(879, 382);
+            Gestion.Size = new Size(1005, 509);
             Gestion.TabIndex = 2;
             // 
             // tabProyectos
@@ -122,11 +123,44 @@
             tabProyectos.Location = new Point(4, 24);
             tabProyectos.Margin = new Padding(3, 2, 3, 2);
             tabProyectos.Name = "tabProyectos";
-            tabProyectos.Padding = new Padding(3, 2, 3, 2);
-            tabProyectos.Size = new Size(871, 354);
+            tabProyectos.Padding = new Padding(3);
+            tabProyectos.Size = new Size(997, 476);
             tabProyectos.TabIndex = 0;
             tabProyectos.Text = "Proyectos";
             tabProyectos.UseVisualStyleBackColor = true;
+            // 
+            // estadoProyecto
+            // 
+            estadoProyecto.Controls.Add(rbFinalizado);
+            estadoProyecto.Controls.Add(rbProceso);
+            estadoProyecto.Location = new Point(670, 38);
+            estadoProyecto.Name = "estadoProyecto";
+            estadoProyecto.Size = new Size(288, 125);
+            estadoProyecto.TabIndex = 15;
+            estadoProyecto.TabStop = false;
+            estadoProyecto.Text = "Estado";
+            // 
+            // rbFinalizado
+            // 
+            rbFinalizado.AutoSize = true;
+            rbFinalizado.Location = new Point(157, 56);
+            rbFinalizado.Name = "rbFinalizado";
+            rbFinalizado.Size = new Size(98, 24);
+            rbFinalizado.TabIndex = 1;
+            rbFinalizado.TabStop = true;
+            rbFinalizado.Text = "Finalizado";
+            rbFinalizado.UseVisualStyleBackColor = true;
+            // 
+            // rbProceso
+            // 
+            rbProceso.AutoSize = true;
+            rbProceso.Location = new Point(23, 56);
+            rbProceso.Name = "rbProceso";
+            rbProceso.Size = new Size(102, 24);
+            rbProceso.TabIndex = 0;
+            rbProceso.TabStop = true;
+            rbProceso.Text = "En Proceso";
+            rbProceso.UseVisualStyleBackColor = true;
             // 
             // buttonGuardar
             // 
@@ -147,7 +181,7 @@
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(860, 136);
+            dataGridView1.Size = new Size(983, 182);
             dataGridView1.TabIndex = 12;
             // 
             // ID
@@ -269,9 +303,6 @@
             // 
             // tabTareas
             // 
-            tabTareas.Controls.Add(comboBoxUsuario);
-            tabTareas.Controls.Add(gbEstadoTabla);
-            tabTareas.Controls.Add(gbArea);
             tabTareas.Controls.Add(dataGridView2);
             tabTareas.Controls.Add(buttonCancelar2);
             tabTareas.Controls.Add(buttonGuardar2);
@@ -282,85 +313,11 @@
             tabTareas.Location = new Point(4, 24);
             tabTareas.Margin = new Padding(3, 2, 3, 2);
             tabTareas.Name = "tabTareas";
-            tabTareas.Padding = new Padding(3, 2, 3, 2);
-            tabTareas.Size = new Size(871, 354);
+            tabTareas.Padding = new Padding(3);
+            tabTareas.Size = new Size(997, 476);
             tabTareas.TabIndex = 1;
             tabTareas.Text = "Tareas";
             tabTareas.UseVisualStyleBackColor = true;
-            // 
-            // gbEstadoTabla
-            // 
-            gbEstadoTabla.Controls.Add(rbFinalizadoTabla);
-            gbEstadoTabla.Controls.Add(rbProcesoTabla);
-            gbEstadoTabla.Location = new Point(21, 105);
-            gbEstadoTabla.Margin = new Padding(3, 2, 3, 2);
-            gbEstadoTabla.Name = "gbEstadoTabla";
-            gbEstadoTabla.Padding = new Padding(3, 2, 3, 2);
-            gbEstadoTabla.Size = new Size(219, 74);
-            gbEstadoTabla.TabIndex = 16;
-            gbEstadoTabla.TabStop = false;
-            gbEstadoTabla.Text = "Estado";
-            // 
-            // rbFinalizadoTabla
-            // 
-            rbFinalizadoTabla.AutoSize = true;
-            rbFinalizadoTabla.Location = new Point(128, 28);
-            rbFinalizadoTabla.Margin = new Padding(3, 2, 3, 2);
-            rbFinalizadoTabla.Name = "rbFinalizadoTabla";
-            rbFinalizadoTabla.Size = new Size(78, 19);
-            rbFinalizadoTabla.TabIndex = 1;
-            rbFinalizadoTabla.TabStop = true;
-            rbFinalizadoTabla.Text = "Finalizado";
-            rbFinalizadoTabla.UseVisualStyleBackColor = true;
-            // 
-            // rbProcesoTabla
-            // 
-            rbProcesoTabla.AutoSize = true;
-            rbProcesoTabla.Location = new Point(10, 28);
-            rbProcesoTabla.Margin = new Padding(3, 2, 3, 2);
-            rbProcesoTabla.Name = "rbProcesoTabla";
-            rbProcesoTabla.Size = new Size(83, 19);
-            rbProcesoTabla.TabIndex = 0;
-            rbProcesoTabla.TabStop = true;
-            rbProcesoTabla.Text = "En Proceso";
-            rbProcesoTabla.UseVisualStyleBackColor = true;
-            // 
-            // gbArea
-            // 
-            gbArea.Controls.Add(rbRedes);
-            gbArea.Controls.Add(rbHardware);
-            gbArea.Location = new Point(346, 105);
-            gbArea.Margin = new Padding(3, 2, 3, 2);
-            gbArea.Name = "gbArea";
-            gbArea.Padding = new Padding(3, 2, 3, 2);
-            gbArea.Size = new Size(219, 74);
-            gbArea.TabIndex = 15;
-            gbArea.TabStop = false;
-            gbArea.Text = "Area";
-            // 
-            // rbRedes
-            // 
-            rbRedes.AutoSize = true;
-            rbRedes.Location = new Point(136, 30);
-            rbRedes.Margin = new Padding(3, 2, 3, 2);
-            rbRedes.Name = "rbRedes";
-            rbRedes.Size = new Size(56, 19);
-            rbRedes.TabIndex = 1;
-            rbRedes.TabStop = true;
-            rbRedes.Text = "Redes";
-            rbRedes.UseVisualStyleBackColor = true;
-            // 
-            // rbHardware
-            // 
-            rbHardware.AutoSize = true;
-            rbHardware.Location = new Point(11, 30);
-            rbHardware.Margin = new Padding(3, 2, 3, 2);
-            rbHardware.Name = "rbHardware";
-            rbHardware.Size = new Size(76, 19);
-            rbHardware.TabIndex = 0;
-            rbHardware.TabStop = true;
-            rbHardware.Text = "Hardware";
-            rbHardware.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -445,8 +402,7 @@
             // 
             // buttonCancelar2
             // 
-            buttonCancelar2.Location = new Point(753, 157);
-            buttonCancelar2.Margin = new Padding(3, 2, 3, 2);
+            buttonCancelar2.Location = new Point(594, 117);
             buttonCancelar2.Name = "buttonCancelar2";
             buttonCancelar2.Size = new Size(82, 22);
             buttonCancelar2.TabIndex = 13;
@@ -455,45 +411,110 @@
             // 
             // buttonGuardar2
             // 
-            buttonGuardar2.Location = new Point(753, 130);
-            buttonGuardar2.Margin = new Padding(3, 2, 3, 2);
+            buttonGuardar2.Location = new Point(594, 71);
             buttonGuardar2.Name = "buttonGuardar2";
             buttonGuardar2.Size = new Size(82, 22);
             buttonGuardar2.TabIndex = 12;
             buttonGuardar2.Text = "Guardar";
             buttonGuardar2.UseVisualStyleBackColor = true;
             // 
+            // checkBox5
+            // 
+            checkBox5.AutoSize = true;
+            checkBox5.Location = new Point(222, 161);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(71, 24);
+            checkBox5.TabIndex = 11;
+            checkBox5.Text = "Redes";
+            checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Location = new Point(115, 161);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(96, 24);
+            checkBox4.TabIndex = 10;
+            checkBox4.Text = "Hardware";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 161);
+            label5.Name = "label5";
+            label5.Size = new Size(40, 20);
+            label5.TabIndex = 9;
+            label5.Text = "Area";
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(338, 77);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(99, 24);
+            checkBox3.TabIndex = 8;
+            checkBox3.Text = "Finalizado";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(222, 77);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(110, 24);
+            checkBox2.TabIndex = 7;
+            checkBox2.Text = "En Progreso";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(120, 76);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(96, 24);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "Pendiente";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 77);
+            label4.Name = "label4";
+            label4.Size = new Size(54, 20);
+            label4.TabIndex = 5;
+            label4.Text = "Estado";
+            // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(68, 62);
-            numericUpDown1.Margin = new Padding(3, 2, 3, 2);
+            numericUpDown1.Location = new Point(120, 117);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(131, 23);
+            numericUpDown1.Size = new Size(150, 27);
             numericUpDown1.TabIndex = 4;
             // 
-            // label3
+            // tbUsuario
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 64);
+            label3.Location = new Point(6, 117);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(48, 20);
             label3.TabIndex = 3;
             label3.Text = "Horas";
             // 
-            // dateInicio
+            // label1
             // 
-            dateInicio.Location = new Point(121, 22);
-            dateInicio.Margin = new Padding(3, 2, 3, 2);
+            dateInicio.Location = new Point(120, 27);
             dateInicio.Name = "dateInicio";
-            dateInicio.Size = new Size(253, 23);
+            dateInicio.Size = new Size(270, 27);
             dateInicio.TabIndex = 2;
             // 
-            // FEinicio
+            // comboBoxUsuario
             // 
             FEinicio.AutoSize = true;
-            FEinicio.Location = new Point(21, 26);
+            FEinicio.Location = new Point(6, 34);
             FEinicio.Name = "FEinicio";
-            FEinicio.Size = new Size(86, 15);
+            FEinicio.Size = new Size(108, 20);
             FEinicio.TabIndex = 1;
             FEinicio.Text = "Fecha de Inicio";
             // 
@@ -501,118 +522,104 @@
             // 
             GestionUsuarios.Controls.Add(btnGuardar);
             GestionUsuarios.Controls.Add(dataGridView3);
-            GestionUsuarios.Controls.Add(label4);
+            GestionUsuarios.Controls.Add(lbGmail);
             GestionUsuarios.Controls.Add(tbGmail);
             GestionUsuarios.Controls.Add(tbUsuario);
-            GestionUsuarios.Controls.Add(label1);
-            GestionUsuarios.Location = new Point(4, 24);
-            GestionUsuarios.Margin = new Padding(3, 2, 3, 2);
+            GestionUsuarios.Controls.Add(lbNombreUsuario);
+            GestionUsuarios.Location = new Point(4, 29);
             GestionUsuarios.Name = "GestionUsuarios";
-            GestionUsuarios.Padding = new Padding(3, 2, 3, 2);
-            GestionUsuarios.Size = new Size(871, 354);
+            GestionUsuarios.Padding = new Padding(3);
+            GestionUsuarios.Size = new Size(1026, 476);
             GestionUsuarios.TabIndex = 2;
             GestionUsuarios.Text = "Usuarios";
             GestionUsuarios.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(528, 74);
-            btnGuardar.Margin = new Padding(3, 2, 3, 2);
+            btnGuardar.Location = new Point(604, 98);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(82, 22);
+            btnGuardar.Size = new Size(94, 29);
             btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += btnGuardar_Click_1;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView3.Location = new Point(17, 135);
-            dataGridView3.Margin = new Padding(3, 2, 3, 2);
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { IdUsuarios, ColumnNombreUsuario, ColumnGmail, ColumnEditarUsuario, ColumnEliminarUsuario });
+            dataGridView3.Location = new Point(19, 180);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(678, 68);
+            dataGridView3.Size = new Size(679, 115);
             dataGridView3.TabIndex = 4;
             // 
-            // Column1
+            // IdUsuarios
             // 
-            Column1.HeaderText = "ID";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
+            IdUsuarios.HeaderText = "ID";
+            IdUsuarios.MinimumWidth = 6;
+            IdUsuarios.Name = "IdUsuarios";
+            IdUsuarios.Width = 125;
             // 
-            // Column2
+            // ColumnNombreUsuario
             // 
-            Column2.HeaderText = "Nombre";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
+            ColumnNombreUsuario.HeaderText = "Nombre";
+            ColumnNombreUsuario.MinimumWidth = 6;
+            ColumnNombreUsuario.Name = "ColumnNombreUsuario";
+            ColumnNombreUsuario.Width = 125;
             // 
-            // Column3
+            // ColumnGmail
             // 
-            Column3.HeaderText = "Gmail";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
+            ColumnGmail.HeaderText = "Gmail";
+            ColumnGmail.MinimumWidth = 6;
+            ColumnGmail.Name = "ColumnGmail";
+            ColumnGmail.Width = 125;
             // 
-            // Column4
+            // ColumnEditarUsuario
             // 
-            Column4.HeaderText = "Editar";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
+            ColumnEditarUsuario.HeaderText = "Editar";
+            ColumnEditarUsuario.MinimumWidth = 6;
+            ColumnEditarUsuario.Name = "ColumnEditarUsuario";
+            ColumnEditarUsuario.Width = 125;
             // 
-            // Column5
+            // ColumnEliminarUsuario
             // 
-            Column5.HeaderText = "Eliminar";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 125;
+            ColumnEliminarUsuario.HeaderText = "Eliminar";
+            ColumnEliminarUsuario.MinimumWidth = 6;
+            ColumnEliminarUsuario.Name = "ColumnEliminarUsuario";
+            ColumnEliminarUsuario.Width = 125;
             // 
-            // label4
+            // lbGmail
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(17, 80);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Gmail";
+            lbGmail.AutoSize = true;
+            lbGmail.Location = new Point(19, 107);
+            lbGmail.Name = "lbGmail";
+            lbGmail.Size = new Size(48, 20);
+            lbGmail.TabIndex = 3;
+            lbGmail.Text = "Gmail";
             // 
             // tbGmail
             // 
-            tbGmail.Location = new Point(78, 75);
-            tbGmail.Margin = new Padding(3, 2, 3, 2);
+            tbGmail.Location = new Point(89, 100);
             tbGmail.Name = "tbGmail";
-            tbGmail.Size = new Size(274, 23);
+            tbGmail.Size = new Size(313, 27);
             tbGmail.TabIndex = 2;
             // 
             // tbUsuario
             // 
-            tbUsuario.Location = new Point(78, 32);
-            tbUsuario.Margin = new Padding(3, 2, 3, 2);
+            tbUsuario.Location = new Point(89, 43);
             tbUsuario.Name = "tbUsuario";
-            tbUsuario.Size = new Size(274, 23);
+            tbUsuario.Size = new Size(313, 27);
             tbUsuario.TabIndex = 1;
             // 
-            // label1
+            // lbNombreUsuario
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(17, 34);
-            label1.Name = "label1";
-            label1.Size = new Size(51, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Nombre";
-            // 
-            // comboBoxUsuario
-            // 
-            comboBoxUsuario.FormattingEnabled = true;
-            comboBoxUsuario.Location = new Point(622, 25);
-            comboBoxUsuario.Name = "comboBoxUsuario";
-            comboBoxUsuario.Size = new Size(121, 23);
-            comboBoxUsuario.TabIndex = 17;
-            comboBoxUsuario.SelectedIndexChanged += comboBoxUsuario_SelectedIndexChanged;
+            lbNombreUsuario.AutoSize = true;
+            lbNombreUsuario.Location = new Point(19, 46);
+            lbNombreUsuario.Name = "lbNombreUsuario";
+            lbNombreUsuario.Size = new Size(64, 20);
+            lbNombreUsuario.TabIndex = 0;
+            lbNombreUsuario.Text = "Nombre";
             // 
             // Form1
             // 
@@ -684,25 +691,9 @@
         private DataGridViewTextBoxColumn ColumnFechaCreacion;
         private DataGridViewButtonColumn ButtonEditar;
         private DataGridViewButtonColumn ButtonEliminar;
-        private GroupBox gbArea;
-        private RadioButton rbRedes;
-        private RadioButton rbHardware;
-        private GroupBox gbEstadoTabla;
-        private RadioButton rbFinalizadoTabla;
-        private RadioButton rbProcesoTabla;
-        private TabPage GestionUsuarios;
-        private DataGridView dataGridView3;
-        private Label label4;
-        private TextBox tbGmail;
-        private TextBox tbUsuario;
-        private Label label1;
-        private Button btnGuardar;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewButtonColumn Column4;
-        private DataGridViewButtonColumn Column5;
-        private ComboBox comboBoxUsuario;
+        private GroupBox estadoProyecto;
+        private RadioButton rbFinalizado;
+        private RadioButton rbProceso;
 
         public object DateCreacion { get; private set; }
     }
