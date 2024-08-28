@@ -163,5 +163,121 @@ namespace evaluacion
                 }
             }
         }
+        private void numericHorasTotales_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void InitializeDataGridViewUsuarios()
+        {
+            dataGridView3.Columns.Clear();
+
+            dataGridView3.Columns.Add("U_ID", "ID");
+            dataGridView3.Columns.Add("U_NOMBRE", "Nombre");
+            dataGridView3.Columns.Add("U_EMAIL", "Email");
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            string nombre = tbUsuario.Text;
+            string email = tbGmail.Text;
+
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(email))
+            {
+                MessageBox.Show("LOS CAMPOS NO PUEDEN ESTAR VACIOS.");
+                return;
+            }
+
+            //GENERAR UN ID INCREMENTABLE
+            int nuevoId = dataGridView3.Rows.Count;
+
+            //AÑADIR UN NUEVO USUARIO A LA TABLA
+            dataGridView3.Rows.Add(nuevoId, nombre, email);
+
+            //LIMPIAR LOS CAMPOS DE TEXTO
+            tbUsuario.Text = "";
+            tbGmail.Text = "";
+
+            MessageBox.Show("USUARIO GUARDADO CORRECTAMENTE.");
+        }
+
+        private void InitializeDataGridViewTareas()
+        {
+            dataGridView2.Columns.Clear();
+
+            dataGridView2.Columns.Add("IDTareas", "ID");
+            dataGridView2.Columns.Add("ColumnNombre", "Nombre");
+            dataGridView2.Columns.Add("ColumnDescripcion", "Descripción");
+            dataGridView2.Columns.Add("ColumnEstado", "Estado");
+            dataGridView2.Columns.Add("ColumnHrsTrabajadas", "Horas Trabajadas");
+            dataGridView2.Columns.Add("ColumnHrsTotales", "Horas Totales");
+            dataGridView2.Columns.Add("ColumnFechaCreacion", "Fecha Creación");
+
+            ButtonEditar = new DataGridViewButtonColumn();
+            ButtonEditar.Name = "ButtonEditar";
+            ButtonEditar.HeaderText = "Editar";
+            ButtonEditar.Text = "Editar";
+            ButtonEditar.UseColumnTextForButtonValue = true;
+            dataGridView2.Columns.Add(ButtonEditar);
+
+            ButtonEliminar = new DataGridViewButtonColumn();
+            ButtonEliminar.Name = "ButtonEliminar";
+            ButtonEliminar.HeaderText = "Eliminar";
+            ButtonEliminar.Text = "Eliminar";
+            ButtonEliminar.UseColumnTextForButtonValue = true;
+            dataGridView2.Columns.Add(ButtonEliminar);
+        }
+
+        private void CargarUsuariosEnComboBox()
+        {
+            comboBoxUsuario.Items.Clear(); // Limpiar los elementos existentes en el ComboBox
+
+            foreach (DataGridViewRow row in dataGridView3.Rows)
+            {
+                if (row.Cells["U_NOMBRE"] != null && row.Cells["U_ID"] != null)
+                {
+                    string nombreUsuario = row.Cells["U_NOMBRE"].Value.ToString();
+                    int idUsuario = Convert.ToInt32(row.Cells["U_ID"].Value);
+
+                    // Crear un objeto para almacenar el nombre y el ID del usuario
+                    comboBoxUsuario.Items.Add(new ComboBoxItem(nombreUsuario, idUsuario));
+                }
+            }
+
+            if (comboBoxUsuario.Items.Count > 0)
+            {
+                comboBoxUsuario.SelectedIndex = 0; // Seleccionar el primer usuario por defecto
+            }
+        }
+
+        // Clase personalizada para almacenar el nombre y el ID del usuario en el ComboBox
+        public class ComboBoxItem
+        {
+            public string Nombre { get; private set; }
+            public int Id { get; private set; }
+
+            public ComboBoxItem(string nombre, int id)
+            {
+                Nombre = nombre;
+                Id = id;
+            }
+
+            public override string ToString()
+            {
+                return Nombre; // Esto es lo que se mostrará en el ComboBox
+            }
+        }
+
+        // Evento para manejar la selección de un usuario en el ComboBox
+        private void comboBoxUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBoxItem selectedItem = comboBoxUsuario.SelectedItem as ComboBoxItem;
+            if (selectedItem != null)
+            {
+                int idUsuarioSeleccionado = selectedItem.Id;
+
+                // Aquí puedes manejar lo que sucede cuando se selecciona un usuario, como mostrar más detalles
+                MessageBox.Show($"Usuario seleccionado: {selectedItem.Nombre} con ID: {idUsuarioSeleccionado}");
+            }
+        }
     }
 }
