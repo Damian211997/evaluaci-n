@@ -29,6 +29,18 @@
         private void InitializeComponent()
         {
             Gestion = new TabControl();
+            GestionUsuarios = new TabPage();
+            btnGuardar = new Button();
+            dataGridView3 = new DataGridView();
+            IdUsuarios = new DataGridViewTextBoxColumn();
+            ColumnNombreUsuario = new DataGridViewTextBoxColumn();
+            ColumnGmail = new DataGridViewTextBoxColumn();
+            ColumnEditarUsuario = new DataGridViewButtonColumn();
+            ColumnEliminarUsuario = new DataGridViewButtonColumn();
+            lbGmail = new Label();
+            tbGmail = new TextBox();
+            tbUsuario = new TextBox();
+            lbNombreUsuario = new Label();
             tabProyectos = new TabPage();
             estadoProyecto = new GroupBox();
             rbFinalizado = new RadioButton();
@@ -74,19 +86,13 @@
             label3 = new Label();
             dateInicio = new DateTimePicker();
             FEinicio = new Label();
-            GestionUsuarios = new TabPage();
-            btnGuardar = new Button();
-            dataGridView3 = new DataGridView();
-            IdUsuarios = new DataGridViewTextBoxColumn();
-            ColumnNombreUsuario = new DataGridViewTextBoxColumn();
-            ColumnGmail = new DataGridViewTextBoxColumn();
-            ColumnEditarUsuario = new DataGridViewButtonColumn();
-            ColumnEliminarUsuario = new DataGridViewButtonColumn();
-            lbGmail = new Label();
-            tbGmail = new TextBox();
-            tbUsuario = new TextBox();
-            lbNombreUsuario = new Label();
+            lbEmpleado = new Label();
+            comboBoxEmpleado = new ComboBox();
+            comboBoxProyecto = new ComboBox();
+            lbProyecto = new Label();
             Gestion.SuspendLayout();
+            GestionUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             tabProyectos.SuspendLayout();
             estadoProyecto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -96,8 +102,6 @@
             gbArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            GestionUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
             // 
             // Gestion
@@ -110,6 +114,109 @@
             Gestion.SelectedIndex = 0;
             Gestion.Size = new Size(1034, 509);
             Gestion.TabIndex = 2;
+            // 
+            // GestionUsuarios
+            // 
+            GestionUsuarios.Controls.Add(btnGuardar);
+            GestionUsuarios.Controls.Add(dataGridView3);
+            GestionUsuarios.Controls.Add(lbGmail);
+            GestionUsuarios.Controls.Add(tbGmail);
+            GestionUsuarios.Controls.Add(tbUsuario);
+            GestionUsuarios.Controls.Add(lbNombreUsuario);
+            GestionUsuarios.Location = new Point(4, 29);
+            GestionUsuarios.Name = "GestionUsuarios";
+            GestionUsuarios.Padding = new Padding(3);
+            GestionUsuarios.Size = new Size(1026, 476);
+            GestionUsuarios.TabIndex = 2;
+            GestionUsuarios.Text = "Usuarios";
+            GestionUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(604, 98);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(94, 29);
+            btnGuardar.TabIndex = 5;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // dataGridView3
+            // 
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { IdUsuarios, ColumnNombreUsuario, ColumnGmail, ColumnEditarUsuario, ColumnEliminarUsuario });
+            dataGridView3.Location = new Point(19, 180);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 51;
+            dataGridView3.Size = new Size(679, 115);
+            dataGridView3.TabIndex = 4;
+            // 
+            // IdUsuarios
+            // 
+            IdUsuarios.HeaderText = "ID";
+            IdUsuarios.MinimumWidth = 6;
+            IdUsuarios.Name = "IdUsuarios";
+            IdUsuarios.Width = 125;
+            // 
+            // ColumnNombreUsuario
+            // 
+            ColumnNombreUsuario.HeaderText = "Nombre";
+            ColumnNombreUsuario.MinimumWidth = 6;
+            ColumnNombreUsuario.Name = "ColumnNombreUsuario";
+            ColumnNombreUsuario.Width = 125;
+            // 
+            // ColumnGmail
+            // 
+            ColumnGmail.HeaderText = "Gmail";
+            ColumnGmail.MinimumWidth = 6;
+            ColumnGmail.Name = "ColumnGmail";
+            ColumnGmail.Width = 125;
+            // 
+            // ColumnEditarUsuario
+            // 
+            ColumnEditarUsuario.HeaderText = "Editar";
+            ColumnEditarUsuario.MinimumWidth = 6;
+            ColumnEditarUsuario.Name = "ColumnEditarUsuario";
+            ColumnEditarUsuario.Width = 125;
+            // 
+            // ColumnEliminarUsuario
+            // 
+            ColumnEliminarUsuario.HeaderText = "Eliminar";
+            ColumnEliminarUsuario.MinimumWidth = 6;
+            ColumnEliminarUsuario.Name = "ColumnEliminarUsuario";
+            ColumnEliminarUsuario.Width = 125;
+            // 
+            // lbGmail
+            // 
+            lbGmail.AutoSize = true;
+            lbGmail.Location = new Point(19, 107);
+            lbGmail.Name = "lbGmail";
+            lbGmail.Size = new Size(48, 20);
+            lbGmail.TabIndex = 3;
+            lbGmail.Text = "Gmail";
+            // 
+            // tbGmail
+            // 
+            tbGmail.Location = new Point(89, 100);
+            tbGmail.Name = "tbGmail";
+            tbGmail.Size = new Size(313, 27);
+            tbGmail.TabIndex = 2;
+            // 
+            // tbUsuario
+            // 
+            tbUsuario.Location = new Point(89, 43);
+            tbUsuario.Name = "tbUsuario";
+            tbUsuario.Size = new Size(313, 27);
+            tbUsuario.TabIndex = 1;
+            // 
+            // lbNombreUsuario
+            // 
+            lbNombreUsuario.AutoSize = true;
+            lbNombreUsuario.Location = new Point(19, 46);
+            lbNombreUsuario.Name = "lbNombreUsuario";
+            lbNombreUsuario.Size = new Size(64, 20);
+            lbNombreUsuario.TabIndex = 0;
+            lbNombreUsuario.Text = "Nombre";
             // 
             // tabProyectos
             // 
@@ -298,6 +405,10 @@
             // 
             // tabTareas
             // 
+            tabTareas.Controls.Add(lbProyecto);
+            tabTareas.Controls.Add(comboBoxProyecto);
+            tabTareas.Controls.Add(comboBoxEmpleado);
+            tabTareas.Controls.Add(lbEmpleado);
             tabTareas.Controls.Add(gbEstadoTabla);
             tabTareas.Controls.Add(gbArea);
             tabTareas.Controls.Add(dataGridView2);
@@ -352,7 +463,7 @@
             // 
             gbArea.Controls.Add(rbRedes);
             gbArea.Controls.Add(rbHardware);
-            gbArea.Location = new Point(705, 29);
+            gbArea.Location = new Point(280, 140);
             gbArea.Name = "gbArea";
             gbArea.Size = new Size(250, 98);
             gbArea.TabIndex = 15;
@@ -385,10 +496,10 @@
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IDTareas, ClumnFechaInicio, ColumnEstado2, ColumnHoras, ColumnArea, ColumnProyecto, ColumnEmpleado, Editar, Agregar, Eliminar });
-            dataGridView2.Location = new Point(24, 244);
+            dataGridView2.Location = new Point(24, 254);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(931, 188);
+            dataGridView2.Size = new Size(963, 188);
             dataGridView2.TabIndex = 14;
             // 
             // IDTareas
@@ -463,7 +574,7 @@
             // 
             // buttonCancelar2
             // 
-            buttonCancelar2.Location = new Point(861, 209);
+            buttonCancelar2.Location = new Point(893, 219);
             buttonCancelar2.Name = "buttonCancelar2";
             buttonCancelar2.Size = new Size(94, 29);
             buttonCancelar2.TabIndex = 13;
@@ -472,7 +583,7 @@
             // 
             // buttonGuardar2
             // 
-            buttonGuardar2.Location = new Point(861, 174);
+            buttonGuardar2.Location = new Point(893, 175);
             buttonGuardar2.Name = "buttonGuardar2";
             buttonGuardar2.Size = new Size(94, 29);
             buttonGuardar2.TabIndex = 12;
@@ -481,15 +592,15 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(78, 83);
+            numericUpDown1.Location = new Point(812, 85);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(150, 27);
+            numericUpDown1.Size = new Size(175, 27);
             numericUpDown1.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(24, 85);
+            label3.Location = new Point(758, 87);
             label3.Name = "label3";
             label3.Size = new Size(48, 20);
             label3.TabIndex = 3;
@@ -497,122 +608,53 @@
             // 
             // dateInicio
             // 
-            dateInicio.Location = new Point(138, 29);
+            dateInicio.Location = new Point(689, 24);
             dateInicio.Name = "dateInicio";
-            dateInicio.Size = new Size(289, 27);
+            dateInicio.Size = new Size(298, 27);
             dateInicio.TabIndex = 2;
             // 
             // FEinicio
             // 
             FEinicio.AutoSize = true;
-            FEinicio.Location = new Point(24, 34);
+            FEinicio.Location = new Point(575, 24);
             FEinicio.Name = "FEinicio";
             FEinicio.Size = new Size(108, 20);
             FEinicio.TabIndex = 1;
             FEinicio.Text = "Fecha de Inicio";
             // 
-            // GestionUsuarios
+            // lbEmpleado
             // 
-            GestionUsuarios.Controls.Add(btnGuardar);
-            GestionUsuarios.Controls.Add(dataGridView3);
-            GestionUsuarios.Controls.Add(lbGmail);
-            GestionUsuarios.Controls.Add(tbGmail);
-            GestionUsuarios.Controls.Add(tbUsuario);
-            GestionUsuarios.Controls.Add(lbNombreUsuario);
-            GestionUsuarios.Location = new Point(4, 29);
-            GestionUsuarios.Name = "GestionUsuarios";
-            GestionUsuarios.Padding = new Padding(3);
-            GestionUsuarios.Size = new Size(1026, 476);
-            GestionUsuarios.TabIndex = 2;
-            GestionUsuarios.Text = "Usuarios";
-            GestionUsuarios.UseVisualStyleBackColor = true;
+            lbEmpleado.AutoSize = true;
+            lbEmpleado.Location = new Point(18, 24);
+            lbEmpleado.Name = "lbEmpleado";
+            lbEmpleado.Size = new Size(83, 20);
+            lbEmpleado.TabIndex = 17;
+            lbEmpleado.Text = "Empleados";
             // 
-            // btnGuardar
+            // comboBoxEmpleado
             // 
-            btnGuardar.Location = new Point(604, 98);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(94, 29);
-            btnGuardar.TabIndex = 5;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += btnGuardar_Click;
+            comboBoxEmpleado.FormattingEnabled = true;
+            comboBoxEmpleado.Location = new Point(107, 21);
+            comboBoxEmpleado.Name = "comboBoxEmpleado";
+            comboBoxEmpleado.Size = new Size(399, 28);
+            comboBoxEmpleado.TabIndex = 18;
             // 
-            // dataGridView3
+            // comboBoxProyecto
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { IdUsuarios, ColumnNombreUsuario, ColumnGmail, ColumnEditarUsuario, ColumnEliminarUsuario });
-            dataGridView3.Location = new Point(19, 180);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(679, 115);
-            dataGridView3.TabIndex = 4;
+            comboBoxProyecto.FormattingEnabled = true;
+            comboBoxProyecto.Location = new Point(107, 77);
+            comboBoxProyecto.Name = "comboBoxProyecto";
+            comboBoxProyecto.Size = new Size(399, 28);
+            comboBoxProyecto.TabIndex = 19;
             // 
-            // IdUsuarios
+            // lbProyecto
             // 
-            IdUsuarios.HeaderText = "ID";
-            IdUsuarios.MinimumWidth = 6;
-            IdUsuarios.Name = "IdUsuarios";
-            IdUsuarios.Width = 125;
-            // 
-            // ColumnNombreUsuario
-            // 
-            ColumnNombreUsuario.HeaderText = "Nombre";
-            ColumnNombreUsuario.MinimumWidth = 6;
-            ColumnNombreUsuario.Name = "ColumnNombreUsuario";
-            ColumnNombreUsuario.Width = 125;
-            // 
-            // ColumnGmail
-            // 
-            ColumnGmail.HeaderText = "Gmail";
-            ColumnGmail.MinimumWidth = 6;
-            ColumnGmail.Name = "ColumnGmail";
-            ColumnGmail.Width = 125;
-            // 
-            // ColumnEditarUsuario
-            // 
-            ColumnEditarUsuario.HeaderText = "Editar";
-            ColumnEditarUsuario.MinimumWidth = 6;
-            ColumnEditarUsuario.Name = "ColumnEditarUsuario";
-            ColumnEditarUsuario.Width = 125;
-            // 
-            // ColumnEliminarUsuario
-            // 
-            ColumnEliminarUsuario.HeaderText = "Eliminar";
-            ColumnEliminarUsuario.MinimumWidth = 6;
-            ColumnEliminarUsuario.Name = "ColumnEliminarUsuario";
-            ColumnEliminarUsuario.Width = 125;
-            // 
-            // lbGmail
-            // 
-            lbGmail.AutoSize = true;
-            lbGmail.Location = new Point(19, 107);
-            lbGmail.Name = "lbGmail";
-            lbGmail.Size = new Size(48, 20);
-            lbGmail.TabIndex = 3;
-            lbGmail.Text = "Gmail";
-            // 
-            // tbGmail
-            // 
-            tbGmail.Location = new Point(89, 100);
-            tbGmail.Name = "tbGmail";
-            tbGmail.Size = new Size(313, 27);
-            tbGmail.TabIndex = 2;
-            // 
-            // tbUsuario
-            // 
-            tbUsuario.Location = new Point(89, 43);
-            tbUsuario.Name = "tbUsuario";
-            tbUsuario.Size = new Size(313, 27);
-            tbUsuario.TabIndex = 1;
-            // 
-            // lbNombreUsuario
-            // 
-            lbNombreUsuario.AutoSize = true;
-            lbNombreUsuario.Location = new Point(19, 46);
-            lbNombreUsuario.Name = "lbNombreUsuario";
-            lbNombreUsuario.Size = new Size(64, 20);
-            lbNombreUsuario.TabIndex = 0;
-            lbNombreUsuario.Text = "Nombre";
+            lbProyecto.AutoSize = true;
+            lbProyecto.Location = new Point(18, 80);
+            lbProyecto.Name = "lbProyecto";
+            lbProyecto.Size = new Size(73, 20);
+            lbProyecto.TabIndex = 20;
+            lbProyecto.Text = "Proyectos";
             // 
             // Form1
             // 
@@ -624,6 +666,9 @@
             Text = "Gestiones";
             Load += Form1_Load;
             Gestion.ResumeLayout(false);
+            GestionUsuarios.ResumeLayout(false);
+            GestionUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             tabProyectos.ResumeLayout(false);
             tabProyectos.PerformLayout();
             estadoProyecto.ResumeLayout(false);
@@ -638,9 +683,6 @@
             gbArea.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            GestionUsuarios.ResumeLayout(false);
-            GestionUsuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ResumeLayout(false);
         }
 
@@ -706,6 +748,10 @@
         private DataGridViewTextBoxColumn ColumnGmail;
         private DataGridViewButtonColumn ColumnEditarUsuario;
         private DataGridViewButtonColumn ColumnEliminarUsuario;
+        private ComboBox comboBoxEmpleado;
+        private Label lbEmpleado;
+        private Label lbProyecto;
+        private ComboBox comboBoxProyecto;
 
         public object DateCreacion { get; private set; }
     }

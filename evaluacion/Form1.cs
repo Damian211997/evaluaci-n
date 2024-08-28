@@ -282,11 +282,11 @@ namespace evaluacion
             {
                 if ((int)row.Cells["IdUsuarios"].Value == id)
                 {
-                    var confirmResult = MessageBox.Show("¿ESTAS SEGURO DE ELIMINAR ESTE PROYECTO?", "CONFIRMAR ELIMINACION", MessageBoxButtons.YesNo);
+                    var confirmResult = MessageBox.Show("¿ESTAS SEGURO DE ELIMINAR ESTE USUARIO?", "CONFIRMAR ELIMINACION", MessageBoxButtons.YesNo);
                     if (confirmResult == DialogResult.Yes)
                     {
                         dataGridView3.Rows.Remove(row);
-                        MessageBox.Show("EL USUARIO HA SIDO ELIMINADO CORRECTAMENTE".);
+                        MessageBox.Show("EL USUARIO HA SIDO ELIMINADO CORRECTAMENTE");
                     }
                     return;
                 }
