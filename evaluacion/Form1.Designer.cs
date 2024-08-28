@@ -63,6 +63,10 @@
             textName = new TextBox();
             Nombre = new Label();
             tabTareas = new TabPage();
+            lbProyecto = new Label();
+            comboBoxProyecto = new ComboBox();
+            comboBoxEmpleado = new ComboBox();
+            lbEmpleado = new Label();
             gbEstadoTabla = new GroupBox();
             rbFinalizadoTabla = new RadioButton();
             rbProcesoTabla = new RadioButton();
@@ -86,10 +90,6 @@
             label3 = new Label();
             dateInicio = new DateTimePicker();
             FEinicio = new Label();
-            lbEmpleado = new Label();
-            comboBoxEmpleado = new ComboBox();
-            comboBoxProyecto = new ComboBox();
-            lbProyecto = new Label();
             Gestion.SuspendLayout();
             GestionUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -112,7 +112,7 @@
             Gestion.Location = new Point(12, 0);
             Gestion.Name = "Gestion";
             Gestion.SelectedIndex = 0;
-            Gestion.Size = new Size(1034, 509);
+            Gestion.Size = new Size(729, 509);
             Gestion.TabIndex = 2;
             // 
             // GestionUsuarios
@@ -126,7 +126,7 @@
             GestionUsuarios.Location = new Point(4, 29);
             GestionUsuarios.Name = "GestionUsuarios";
             GestionUsuarios.Padding = new Padding(3);
-            GestionUsuarios.Size = new Size(1026, 476);
+            GestionUsuarios.Size = new Size(721, 476);
             GestionUsuarios.TabIndex = 2;
             GestionUsuarios.Text = "Usuarios";
             GestionUsuarios.UseVisualStyleBackColor = true;
@@ -426,6 +426,40 @@
             tabTareas.Text = "Tareas";
             tabTareas.UseVisualStyleBackColor = true;
             // 
+            // lbProyecto
+            // 
+            lbProyecto.AutoSize = true;
+            lbProyecto.Location = new Point(18, 80);
+            lbProyecto.Name = "lbProyecto";
+            lbProyecto.Size = new Size(73, 20);
+            lbProyecto.TabIndex = 20;
+            lbProyecto.Text = "Proyectos";
+            // 
+            // comboBoxProyecto
+            // 
+            comboBoxProyecto.FormattingEnabled = true;
+            comboBoxProyecto.Location = new Point(107, 77);
+            comboBoxProyecto.Name = "comboBoxProyecto";
+            comboBoxProyecto.Size = new Size(423, 28);
+            comboBoxProyecto.TabIndex = 19;
+            // 
+            // comboBoxEmpleado
+            // 
+            comboBoxEmpleado.FormattingEnabled = true;
+            comboBoxEmpleado.Location = new Point(107, 21);
+            comboBoxEmpleado.Name = "comboBoxEmpleado";
+            comboBoxEmpleado.Size = new Size(423, 28);
+            comboBoxEmpleado.TabIndex = 18;
+            // 
+            // lbEmpleado
+            // 
+            lbEmpleado.AutoSize = true;
+            lbEmpleado.Location = new Point(18, 24);
+            lbEmpleado.Name = "lbEmpleado";
+            lbEmpleado.Size = new Size(83, 20);
+            lbEmpleado.TabIndex = 17;
+            lbEmpleado.Text = "Empleados";
+            // 
             // gbEstadoTabla
             // 
             gbEstadoTabla.Controls.Add(rbFinalizadoTabla);
@@ -621,40 +655,6 @@
             FEinicio.Size = new Size(108, 20);
             FEinicio.TabIndex = 1;
             FEinicio.Text = "Fecha de Inicio";
-            // 
-            // lbEmpleado
-            // 
-            lbEmpleado.AutoSize = true;
-            lbEmpleado.Location = new Point(18, 24);
-            lbEmpleado.Name = "lbEmpleado";
-            lbEmpleado.Size = new Size(83, 20);
-            lbEmpleado.TabIndex = 17;
-            lbEmpleado.Text = "Empleados";
-            // 
-            // comboBoxEmpleado
-            // 
-            comboBoxEmpleado.FormattingEnabled = true;
-            comboBoxEmpleado.Location = new Point(107, 21);
-            comboBoxEmpleado.Name = "comboBoxEmpleado";
-            comboBoxEmpleado.Size = new Size(399, 28);
-            comboBoxEmpleado.TabIndex = 18;
-            // 
-            // comboBoxProyecto
-            // 
-            comboBoxProyecto.FormattingEnabled = true;
-            comboBoxProyecto.Location = new Point(107, 77);
-            comboBoxProyecto.Name = "comboBoxProyecto";
-            comboBoxProyecto.Size = new Size(399, 28);
-            comboBoxProyecto.TabIndex = 19;
-            // 
-            // lbProyecto
-            // 
-            lbProyecto.AutoSize = true;
-            lbProyecto.Location = new Point(18, 80);
-            lbProyecto.Name = "lbProyecto";
-            lbProyecto.Size = new Size(73, 20);
-            lbProyecto.TabIndex = 20;
-            lbProyecto.Text = "Proyectos";
             // 
             // Form1
             // 
